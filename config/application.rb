@@ -82,7 +82,7 @@ class << Rails.application
   end
 
   def domain
-    "example.com"
+    "xn--29ap2a0a1bc.xn--y9aam0eb9a4abc.xn--y9a3aq"
   end
 
   def name

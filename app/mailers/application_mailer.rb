@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default :from => "#{Rails.application.name} <nobody@#{Rails.application.domain}>"
+  default :from => "#{Rails.application.name} <khosenk@hell.am>"
 end

@@ -86,7 +86,7 @@ class << Rails.application
   end
 
   def name
-    "խօսենք"
+    "Խօսենք"
   end
 
   # to force everyone to be considered logged-out (without destroying

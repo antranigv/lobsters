@@ -71,24 +71,24 @@ module ApplicationHelper
       if (count = @user.unread_replies_count) > 0
         @right_header_links[replies_unread_path] = {
           :class => ["new_messages"],
-          :title => "#{@user.unread_replies_count} Reply".pluralize(count),
+          :title => "#{@user.unread_replies_count} Պատասխան",
         }
       else
-        @right_header_links[replies_path] = { :title => "Replies" }
+        @right_header_links[replies_path] = { :title => "Պատասխաններ" }
       end
 
       if (count = @user.unread_message_count) > 0
         @right_header_links[messages_path] = {
           :class => ["new_messages"],
-          :title => "#{@user.unread_message_count} Message".pluralize(count),
+          :title => "#{@user.unread_message_count} Նամակ",
         }
       else
-        @right_header_links[messages_path] = { :title => "Messages" }
+        @right_header_links[messages_path] = { :title => "Նամակներ" }
       end
 
       @right_header_links[settings_path] = { :title => "#{@user.username} (#{@user.karma})" }
     else
-      @right_header_links[login_path] = { :title => "Login" }
+      @right_header_links[login_path] = { :title => "Մուտք" }
     end
 
     @right_header_links.each do |k, v|

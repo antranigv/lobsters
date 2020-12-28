@@ -38,7 +38,7 @@ module ApplicationHelper
     }
 
     if @user
-      @header_links[threads_path] = { :title => "Քո Շղշաները" }
+      @header_links[threads_path] = { :title => "Քո Շղթաները" }
     end
 
     if @user && @user.can_submit_stories?

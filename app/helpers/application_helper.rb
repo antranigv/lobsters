@@ -32,24 +32,24 @@ module ApplicationHelper
     return @header_links if @header_links
 
     @header_links = {
-      root_path => { :title => @cur_url == "/" ? Rails.application.name : "Home" },
-      recent_path => { :title => "Recent" },
-      comments_path => { :title => "Comments" },
+      root_path => { :title => @cur_url == "/" ? Rails.application.name : "Գլխաւոր" },
+      recent_path => { :title => "Վերջին" },
+      comments_path => { :title => "Մեկնաբանութիւններ" },
     }
 
     if @user
-      @header_links[threads_path] = { :title => "Your Threads" }
+      @header_links[threads_path] = { :title => "Քո Շղշաները" }
     end
 
     if @user && @user.can_submit_stories?
-      @header_links[new_story_path] = { :title => "Submit Story" }
+      @header_links[new_story_path] = { :title => "Գրառել Պատմութիւն" }
     end
 
     if @user
-      @header_links[saved_path] = { :title => "Saved" }
+      @header_links[saved_path] = { :title => "Պահած" }
     end
 
-    @header_links[search_path] = { :title => "Search" }
+    @header_links[search_path] = { :title => "Որոնել" }
 
     @header_links.each do |k, v|
       v[:class] ||= []

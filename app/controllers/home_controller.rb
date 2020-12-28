@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
   def four_oh_four
     begin
-      @title = "Resource Not Found"
+      @title = "Գոյութիւն չունի"
       render :action => "404", :status => 404
     rescue ActionView::MissingTemplate
       render :html => ("<div class=\"box wide\">" <<
@@ -22,7 +22,7 @@ class HomeController < ApplicationController
 
   def about
     begin
-      @title = "About"
+      @title = "Մեր Մասին"
       render :action => "about"
     rescue ActionView::MissingTemplate
       render :html => ("<div class=\"box wide\">" <<
@@ -34,7 +34,7 @@ class HomeController < ApplicationController
 
   def chat
     begin
-      @title = "Chat"
+      @title = "Զրուցել"
       render :action => "chat"
     rescue ActionView::MissingTemplate
       render :html => ("<div class=\"box wide\">" <<
@@ -46,7 +46,7 @@ class HomeController < ApplicationController
 
   def privacy
     begin
-      @title = "Privacy"
+      @title = "Գաղտնիութիւն"
       render :action => "privacy"
     rescue ActionView::MissingTemplate
       render :html => ("<div class=\"box wide\">" <<
@@ -60,7 +60,7 @@ class HomeController < ApplicationController
       paginate stories.hidden
     }
 
-    @heading = @title = "Hidden Stories"
+    @heading = @title = "Թաքնուած Գրառումներ"
     @cur_url = "/hidden"
 
     render :action => "index"
@@ -76,7 +76,7 @@ class HomeController < ApplicationController
       :href => user_token_link("/rss"),
     }
     @comments_rss_link ||= {
-      :title => "Comments - RSS 2.0",
+      :title => "Մեկնաբանութիւններ - RSS 2.0",
       :href => user_token_link("/comments.rss"),
     }
 
@@ -105,11 +105,11 @@ class HomeController < ApplicationController
       paginate stories.newest
     }
 
-    @heading = @title = "Newest Stories"
+    @heading = @title = "Ամենանոր Գրառումներ"
     @cur_url = "/newest"
 
     @rss_link = {
-      :title => "RSS 2.0 - Newest Items",
+      :title => "RSS 2.0 - Ամենանոր Գրառումներ",
       :href => user_token_link("/newest.rss"),
     }
 
@@ -137,7 +137,7 @@ class HomeController < ApplicationController
       end
     }
 
-    @heading = @title = "Newest Stories by #{by_user.username}"
+    @heading = @title = "Նոր գրառումներ #{by_user.username}֊ի կողմից"
     @cur_url = "/newest/#{by_user.username}"
 
     @newest = true
@@ -176,7 +176,7 @@ class HomeController < ApplicationController
       :href => user_token_link("/saved.rss"),
     }
 
-    @heading = @title = "Saved Stories"
+    @heading = @title = "Պահած Գրառումներ"
     @cur_url = "/saved"
 
     respond_to do |format|
